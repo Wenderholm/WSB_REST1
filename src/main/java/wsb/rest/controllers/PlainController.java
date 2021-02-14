@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PlainController {
 
+    @GetMapping()
+    String index() {
+        return "hello";
+    }
+
     @GetMapping("hello")
     String hello() {
         return "hello";
