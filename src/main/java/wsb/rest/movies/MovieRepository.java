@@ -33,9 +33,9 @@ public class MovieRepository {
     Movie update(Movie movie) {
         Movie movieToUpdate = find(movie.getId());
 
-        movie.setTitle(movie.getTitle());
-        movie.setDirector(movie.getDirector());
-        movie.setYear(movie.getYear());
+        movieToUpdate.setTitle(movie.getTitle());
+        movieToUpdate.setDirector(movie.getDirector());
+        movieToUpdate.setYear(movie.getYear());
 
         return movieToUpdate;
     }

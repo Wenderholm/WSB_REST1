@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RequestMapping("movies")
 @RestController
 public class MovieController {
 
@@ -13,27 +14,27 @@ public class MovieController {
         this.movieRepository = movieRepository;
     }
 
-    @GetMapping("/")
+    @GetMapping
     List<Movie> index() {
         return movieRepository.find();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     Movie show(@PathVariable Long id) {
         return movieRepository.find(id);
     }
 
-    @PutMapping("/")
+    @PutMapping
     Movie update(@RequestBody Movie movie) {
         return movieRepository.update(movie);
     }
 
-    @PostMapping("/")
+    @PostMapping
     Movie save(@RequestBody Movie movie) {
         return movieRepository.save(movie);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
     String delete(@PathVariable Long id) {
         movieRepository.delete(id);
         return "OK";

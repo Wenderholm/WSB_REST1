@@ -16,6 +16,7 @@ public class Movie {
     String year;
 
     public Movie(Long id, String title, Person director, String year) {
+        this.id = id;
         this.title = title;
         this.director = director;
         this.year = year;
