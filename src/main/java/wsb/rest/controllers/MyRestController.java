@@ -70,5 +70,11 @@ public class MyRestController {
         return "Dobra robota, " + name + "!";
     }
 
+    @GetMapping("final")
+    String finalMethod(HttpServletResponse response) {
+        response.setStatus(302);
+        response.setHeader("Location", "https://www.youtube.com/watch?v=WNnzw90vxrE");
+        return "OK";
+    }
 
 }

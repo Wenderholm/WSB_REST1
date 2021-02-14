@@ -42,7 +42,6 @@ Uwaga! Postman zawiera trochę bardziej złożone mechanizmy do obsługi autoryz
 
 6. Usuń swój film. W tym celu wyślij żądanie DELETE pod endpoint `/movies/{id}`, gdzie `{id}` to id Twojego filmu.
 
+### Zadanie 4 - przekierowanie
 
-### Zadanie 4 - ciastka
-
-### Zadanie 5 - przekierowanie 
+1. *W oknie przeglądarki* przejdź pod endpoint `final`. Sprawdź w nagłówkach odpowiedzi, czy strona, pod którą Cię przekierowało to ta sama, co w nagłówku `Location` odpowiedzi żądania.
