@@ -24,7 +24,7 @@ Uwaga! Postman zawiera trochę bardziej złożone mechanizmy do obsługi autoryz
 
 2. Uzyskaj token - wyślij żądanie POST pod endpoint `auth`. W odpowiedzi uzyskasz wskazówki, co należy dodać do tego żądania, aby wygenerować token. Po uzupełnieniu wymaganych informacji w odpowiedzi powinien zostać odesłany token.
 
-3. Spróbuj wysłać żądanie GET pod endpoint `/restrictedAccess` - powinna przyjść odpowiedź ze statusem 422.
+3. Spróbuj wysłać żądanie GET pod endpoint `/restrictedAccess` - powinna przyjść odpowiedź ze statusem 401.
 
 4. Spróbuj ponownie wysłać żądanie z punktu 3, jednak dodaj nagłówek `Authorization`, wykorzystując typ autoryzacji uzyskany w punkcie 1 i token uzyskany w punkcie 2.
 
