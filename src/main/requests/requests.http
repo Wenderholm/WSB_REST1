@@ -1,0 +1,81 @@
+GET http://apollo-test.logintegra.com/rest/languages
+
+<> 2021-03-20T093738.200.json
+###
+GET http://apollo-test.logintegra.com/rest/hello
+Accept-Language: it
+
+<> 2021-03-20T094154.200.html
+<> 2021-03-20T094134.200.html
+<> 2021-03-20T094118.404.json
+<> 2021-03-20T094108.404.json
+#[
+#  "pl",
+#  "en",
+#  "de",
+#  "fr",
+#  "es",
+#  "it"
+#]
+### wyświeltenie autorów
+GET http://apollo-test.logintegra.com/rest/auth
+
+<> 2021-03-20T100246.200.txt
+###
+POST http://apollo-test.logintegra.com/rest/auth
+Content-Type: application/x-www-form-urlencoded
+
+
+### lista filmów zadanie 3
+GET http://apollo-test.logintegra.com/rest/movies
+
+<> 2021-03-20T100948.200.json
+<> 2021-03-20T100934.200.json
+<> 2021-03-20T100903.200.json
+<> 2021-03-20T095512.200.json
+<> 2021-03-20T095506.200.json
+<> 2021-03-20T095450.200.json
+<> 2021-03-20T095122.200.json
+
+### lista filmów zadanie 3 - wybranie ifilmu nr 2
+GET http://apollo-test.logintegra.com/rest/movies/2
+
+<> 2021-03-20T095504.200.json
+
+### lista filmów zadanie 3 - dodanie filmu
+POST http://apollo-test.logintegra.com/rest/movies
+Content-Type: application/json
+
+{
+  "title": "nowy film ",
+  "director": {
+    "name": "AAA",
+    "lastName": "nowy"
+  },
+  "year": "2030"
+}
+
+<> 2021-03-20T100913.200.json
+
+### lista filmów zadanie 3 - aktualizacja
+PUT http://apollo-test.logintegra.com/rest/movies
+Content-Type: application/json
+
+{
+  "id": 7,
+  "title": "nowy film -aktualizacja  ",
+  "director": {
+    "name": "Romek",
+    "lastName": "nowy"
+  },
+  "year": "2030"
+}
+
+<> 2021-03-20T100941.200.json
+
+### lista filmów zadanie 3 - usuwanie danych
+DELETE http://apollo-test.logintegra.com/rest/movies/7
+
+<> 2021-03-20T100957.200.txt
+<> 2021-03-20T095520.200.txt
+<> 2021-03-20T095458.200.txt
